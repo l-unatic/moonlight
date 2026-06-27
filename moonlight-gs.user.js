@@ -17,9 +17,7 @@
     const CONFIG = {
         favicon: "https://i.imgur.com/IpZEY5O.png",
         fallbackImage: "https://i.imgur.com/C9Zoe7B.jpeg",
-        video: "",
-        userId: "17428",
-        splashOncePerSession: true
+        video: ""
     };
 
     document.title = "gamesense";
@@ -669,51 +667,6 @@ button:hover {
 #moonlit-settings input {
     width: 100%;
     margin-top: 5px;
-}
-
-/* Splash */
-#moonlit-splash {
-    position: fixed;
-    inset: 0;
-    z-index: 99999999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(4,8,13,.88);
-    opacity: 1;
-    transition: opacity .65s ease;
-    pointer-events: none;
-}
-
-#moonlit-splash.fade {
-    opacity: 0;
-}
-
-#moonlit-splash-card {
-    border: 1px solid rgba(160,200,236,.22);
-    background: rgba(8,15,23,.72);
-    padding: 28px 46px;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,.35);
-}
-
-#moonlit-splash-moon {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#moonlit-splash-title {
-    color: #d4dde5;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: .4px;
-}
-
-#moonlit-splash-sub {
-    color: var(--moon-blue-light);
-    font-size: 11px;
-    margin-top: 8px;
 }
 
 /* Chat asleep replacement */
