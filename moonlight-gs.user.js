@@ -1094,26 +1094,6 @@ a.button:hover {
         video.play().catch(() => {});
     }
 
-    function splash() {
-        if (CONFIG.splashOncePerSession && sessionStorage.getItem("moonlit-splash-seen")) return;
-        sessionStorage.setItem("moonlit-splash-seen", "1");
-
-        const splashEl = document.createElement("div");
-        splashEl.id = "moonlit-splash";
-        splashEl.innerHTML = `
-            <div id="moonlit-splash-card">
-                <div id="moonlit-splash-moon">🌙</div>
-                <div id="moonlit-splash-title">moonlight gs theme</div>
-                <div id="moonlit-splash-sub">made by lunatic :3</div>
-            </div>
-        `;
-
-        document.documentElement.appendChild(splashEl);
-
-        setTimeout(() => splashEl.classList.add("fade"), 850);
-        setTimeout(() => splashEl.remove(), 1600);
-    }
-
     function settingsPanel() {
         if (document.querySelector("#moonlit-settings")) return;
         if (!document.body) return;
@@ -1656,7 +1636,6 @@ function fixTopicReplyColumns() {
         removeRepliesColumn();
         mouseLight();
         injectVideo();
-        splash();
         settingsPanel();
         pageTransitions();
         highlightSpecialNav();
