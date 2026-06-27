@@ -1244,7 +1244,7 @@ a.button:hover {
             return;
         }
 
-if (location.pathname.includes("login.php")) {
+        if (location.pathname.includes("login.php")) {
             document.querySelector("#navlogin")?.classList.add("isactive");
             return;
         }
