@@ -1239,6 +1239,16 @@ a.button:hover {
             return;
         }
 
+        if (location.pathname.includes("register.php")) {
+            document.querySelector("#navregister")?.classList.add("isactive");
+            return;
+        }
+
+if (location.pathname.includes("login.php")) {
+            document.querySelector("#navlogin")?.classList.add("isactive");
+            return;
+        }
+
         if (location.pathname.includes("profile.php")) {
             document.querySelector("#navprofile")?.classList.add("isactive");
             return;
