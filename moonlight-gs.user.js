@@ -1696,6 +1696,30 @@ function fixTopicReplyColumns() {
     });
 }
 
+    function fixShoutControls() {
+    const shoutVol = document.querySelector("#shoutvol");
+    const emoji = document.querySelector("#emojiselector");
+
+    if (!shoutVol || !emoji) return;
+    if (shoutVol.parentElement.classList.contains("moonlit-shout-controls")) return;
+
+    const wrap = document.createElement("div");
+    wrap.className = "moonlit-shout-controls";
+
+    wrap.style.display = "inline-flex";
+    wrap.style.alignItems = "center";
+    wrap.style.marginLeft = "6px";
+
+    shoutVol.parentNode.insertBefore(wrap, shoutVol);
+
+    wrap.appendChild(shoutVol);
+    wrap.appendChild(emoji);
+
+    shoutVol.style.margin = "0";
+    emoji.style.margin = "0";
+    emoji.style.marginLeft = "-1px";
+}
+
     function init() {
         setFavicon();
         fixLogo();
@@ -1718,6 +1742,7 @@ function fixTopicReplyColumns() {
         mergeLikeBlocksIntoPosts();
         fixUsergroupColors();
         fixTopicReplyColumns();
+        fixShoutControls();
 
         [150, 400, 900, 1600].forEach(ms => {
             setTimeout(() => {
